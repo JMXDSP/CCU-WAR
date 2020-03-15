@@ -58,3 +58,34 @@ export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 4.1 下载 `appium`  
 > 官网：https://github.com/appium/appium-desktop/releases/tag/v1.15.1  
 4.2 运行 `Appium-linux-1.15.1.AppImage`
+
+**离线安装SDK**  
+5.1 下载SDK和SDK System images  
+地址：https://www.androiddevtools.cn/  
+5.2 将SDK解压到 sdk 文件下的platforms文件夹中  
+5.3 将 SDK System images 解压到sdk文件夹下的 system-images 文件夹中 如果没有就手动创建一个  
+5.4 tools->options->clear cache  
+5.5 创建AVD  
+Tools->Manage AVDs->create  
+5.6 运行AVD  
+
+**安装Anbox**  
+6.1 简洁版安装  
+```
+sudo add-apt-repository ppa:morphis/anbox-support
+sudo apt install -y anbox-modules-dkms
+sudo modprobe ashmem_linux
+sudo modprobe binder_linux
+sudo snap install --devmode --beta anbox
+```
+
+**安装xDroid**  
+7.1 下载 xDroid  
+地址：https://www.linzhuotech.com/index.php/home/index/xdroid.html  
+7.2 解压 xDroid 
+`tar -zxvf xDroidInstall-x86_64-v3.0007.tar.gz`
+7.3 设置安装文件权限 
+`chmod +x install.sh`
+7.4 执行安装脚本
+`./install.sh`
+7.5 图形化安装 一直下一步
